@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hijabians Collection</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+body {
+    font-family: Arial, sans-serif;
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #ff69b4; 
+    color: #fff; 
+    padding: 25px;
+    text-align: center;
+}
+
+nav {
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+nav a {
+    color: #fff; 
+    text-decoration: none;
+}
+nav a:hover{
+    background-color: rgb(167, 96, 167);
+}
+nav a:active{
+    background-color: rgb(202, 131, 131);
+}
+
+section {
+    padding: 50px;
+}
+
+.hero-section {
+    background-image: url('pexels-photo-221835.webp'); 
+    background-size: cover;
+    background-position: center;
+    color: #fff; 
+    text-align: center;
+    padding: 210px 200px;
+}
+
+.stylish-abayas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.stylish-abaya {
+    width: 300px;
+    margin: 10px 0;
+    background-color: #fff; 
+    border-radius: 8px;
+    box-shadow: 0 0 10px #333;
+}
+
+.stylish-abaya img {
+    width: 100%;
+    height: auto;
+}
+
+.stylish-abaya-collection {
+    text-align: center;
+    padding: 20px;
+}
+
+footer {
+    background-color: #ff69b4; 
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Modest Elegance</h1>
+    </header>
+    <nav>
+        <a href="Home.html">Home</a>
+        <a href="Feedback.html">Feedback</a>
+        <a href="About Us.html">About Us</a>
+        <a href="Contact.html">Contact Us</a>
+        <a href="Order.html">Orders</a>
+        <a href="Gallery.html">Gallery</a>
+        <a href="Portfolio.html">Portfolio</a>
+        <div class="s-bar">
+            <input type="text" placeholder="Search...">
+            <button>Search</button>
+        </div>
+    </nav>
+    <section class="hero-section">
+        <h2>Elevate Your Style with Modest Elegance</h2>
+        <p>Welcome to Hijabians Collection, where modesty meets modern fashion.</p>
+    </section>
+    <section class="stylish-abayas">
+        <div class="stylish-abaya">
+            <img src="FloralFrill_Abaya.jpg" alt="Abaya">
+            <div class="stylish-abaya-collection">
+                <h3 style="color:#3498db;">White Abaya</h3>
+                <p style="color: black;">Simple and beautiful abaya</p>
+            </div>
+        </div>
+        <div class="stylish-abaya">
+            <img src="WhiteAbaya_2.jpg" alt="Abaya">
+            <div class="stylish-abaya-collection">
+                <h3 style="color:#3498db;">White Abaya</h3>
+                <p style="color: black;">Simple and beautiful abaya</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>© 2024 Hijabians Collection. All rights reserved.</p>
+    </footer>
+    <script>
+        const searchButton = document.querySelector('.s-bar button');
+const searchInput = document.querySelector('.s-bar input[type="text"]');
+
+searchButton.addEventListener('click', () => {
+  const searchText = searchInput.value;
+  alert(`You entered: ${searchText}`);
+});
+    </script>
+</body>
+</html>
