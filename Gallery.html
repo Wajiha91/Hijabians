@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hijabians Collection</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f9f9f9;
+		}
+        header{
+            background-color: #ff69b4;
+            color:   #fff;
+            padding: 8px;
+            text-align: center;
+        }
+        nav{
+            background-color:  #333;
+            display: flex;
+            justify-content: space-around;
+            padding:10px;
+        }
+        nav a{
+            color: #fff;
+            text-decoration: none;
+        }
+        nav a:hover{
+            background-color: rgb(167, 96, 167);
+        }
+        nav a:active{
+            background-color: rgb(202, 131, 131);
+        }
+        
+		.gallery {
+			display: flex; 
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		.abaya-category {
+			width: 100%;
+			text-align: center;
+            margin-bottom: 50px;
+		}
+		.abaya-category h2 {
+            background-color: rgb(248, 201, 208);
+			text-align: center;
+			border: 2px solid black;
+			padding: 8px;
+			margin-bottom: 20px;
+		}
+		.abaya-row {
+			display: flex;
+			 flex-wrap: wrap;              
+			justify-content: center;
+		}
+		.abaya {
+			margin: 20px;
+			width: 250px;
+			text-align: center;
+			background-color:white;
+			padding: 20px;
+			border: 1px solid #ddd;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+		.abaya img {
+			width: 100%;
+			height: 250px;
+			object-fit: cover;
+			cursor: pointer;
+		}
+		.abaya-content {
+			padding: 20px;
+		}
+		.abaya-content h3 {
+			margin-bottom: 10px;
+		}
+		.abaya-content p {
+			margin-bottom: 20px;
+		}
+		<!-- .abaya-content ol {
+	     	list-style: none;
+			padding: 0;
+			margin: 0;
+		} -->
+		.abaya-content li {
+			margin-bottom: 10px;
+		}
+		.abaya-content button {
+			background-color:palevioletred;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+        .abaya-content button:hover{
+            background-color: lightcoral;
+        }
+
+        footer {
+            background-color: #ff69b4;
+            color: #fff; 
+            text-align: center;
+            padding: 2px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+		.modal {
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+          }
+          
+          .modal-content {
+            margin: 0 auto;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+          }
+          
+          .modal-content img {
+            max-width: 100%;
+            max-height: 100%;
+            transition: 0.3s;
+            
+          }
+          
+          .modal-content img:hover {
+            transform: scale(1.5); 
+          }
+          
+          .close {
+            color: white;
+            float: right;
+            font-size: 30px;
+            font-weight: bold;
+          }
+          
+          .close:hover,
+          .close:focus {
+            color: #999;
+            text-decoration: none;
+            cursor: pointer;
+          }
+          
+	</style>
+</head>
+<body>
+    <header style="text-align: center;">
+        <h1>Image Gallery</h1>
+    </header>
+    <nav>
+        <a href="Home.html">Home</a>
+        <a href="Feedback.html">Feedback</a>
+        <a href="About Us.html">AboutUs</a>
+        <a href="Contact.html">Contact Us</a>
+        <a href="Order.html">Orders</a>
+        <a href="Gallery.html">Gallery</a>
+        <a href="Portfolio.html">Portfolio</a>
+        <div class="s-bar">
+    <input type="text" placeholder="Search...">
+    <button>Search</button>
+        </div>
+    </nav>
+	<section class="gallery">
+        <div id="colored-abaya" class="abaya-category">
+            <h2>Colored Abaya</h2>
+            <div class="abaya-row">
+                <div class="abaya">
+                    <img src="bottlegreenabaya.jpeg" alt="Colored abaya" onclick="openModal(this.src)">
+                    <div class="abaya-content">
+                        <h3>RS2,340</h3>
+                        <p>Dress in elegance with our Colored Abaya featuring trendy cuff sleeves! This stylish abaya combines two beautiful shades seamlessly, creating a striking contrast. Crafted with soft Georgette. The cuff sleeves add a modern touch, making it perfect for any occasion.</p>
+                        <ol>
+                            <li>Color: bottlegreen</li>
+                            <li>Georgette soft & lightweight</li>
+                            <li>Front closed</li>
+                            <li>Cuffed sleeves</li>
+                        </ol>
+                        <a href="Order.html" style="text-decoration: none;"> <button>Order Now</button></a>
+                    </div>
+                </div>
+                <div class="abaya">
+                    <img src="Beavercolorpleatedabaya.jpg" alt="Colored abaya" onclick="openModal(this.src)">
+                    <div class="abaya-content">
+                        <h3>RS2,340</h3>
+                        <p>Dress in elegance with our Colored Abaya featuring trendy cuff sleeves! This stylish abaya combines two beautiful shades seamlessly, creating a striking contrast. Crafted with soft Georgette. The cuff sleeves add a modern touch, making it perfect for any occasion.</p>
+                        <ol>
+                            <li>Color: Beaver</li>
+                            <li>Georgette soft & lightweight</li>
+                            <li>Pleated Abaya</li>
+                            <li>Cuffed sleeves</li>
+                        </ol>
+                        <a href="Order.html" style="text-decoration: none;"> <button>Order Now</button></a>
+                    </div>
+                </div>
+                <div class="abaya">
+                    <img src="coloredabaya.jpg" alt="Colored abaya" onclick="openModal(this.src)">
+                    <div class="abaya-content">
+                        <h3>RS2,340</h3>
+                        <p>Dress in elegance with our beautiful Abaya featuring trendy cuff sleeves! This stylish abaya combines two beautiful shades seamlessly, creating a striking contrast. Crafted with soft Georgette. The cuff sleeves add a modern touch, making it perfect for any occasion.</p>
+                        <ol>
+                            <li>Color: Brown</li>
+                            <li>Georgette soft & lightweight</li>
+                            <li>Front closed</li>
+                            <li>Cuffed sleeves</li>
+                        </ol>
+                        <a href="Order.html" style="text-decoration: none;"> <button>Order Now</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="white-abaya" class="abaya-category">
+            <h2>White Abaya</h2>
+            <div class="abaya-row">
+                <div class="abaya">
+                    <img src="WhiteAbaya_2.jpg" alt="White abaya" onclick="openModal(this.src)">
+                    <div class="abaya-content">
+                        <h3>RS2,750</h3>
+                        <p>The perfect blend of elegancy & comfort. This is front open chun abaya, it has a front chun which gives it a beautiful look, elastic sleeves style and a complete statement itself. It is made with super comfortable fabric “Georgette”, best for everyday wear.</p>
+                        <ol>
+                            <li>Color: Off White</li>
+                            <li>Premium georgette</li>
+                            <li>Front open</li>
+                        </ol>
+                        <a href="Order.html" style="text-decoration: none;"> <button>Order Now</button></a>
+                    </div>
+                </div>
+                <div class="abaya">
+                    <img src="white.jpg" alt="White abaya" onclick="openModal(this.src)">
+                    <div class="abaya-content">
+                        <h3>RS2,750</h3>
+                        <p>The perfect blend of elegancy & comfort. This is front open chun abaya, it has a front chun which gives it a beautiful look, elastic sleeves style and a complete statement itself. It is made with super comfortable fabric “Georgette”, best for everyday wear.</p>
+                        <ol>
+                            <li>Color: Off White</li>
+                            <li>Premium georgette</li>
+                            <li>Front open</li>
+                        </ol>
+                        <a href="Order.html" style="text-decoration: none;"> <button>Order Now</button></a>
+                    </div>
+                </div>
+                <div class="abaya">
+                    <img src="FloralFrill_Abaya.jpg" alt="White abaya" onclick="openModal(this.src)">
+                    <div class="abaya-content">
+                        <h3>RS2,750</h3>
+                        <p>The perfect blend of elegancy & comfort. This is front open chun abaya, it has a front chun which gives it a beautiful look, elastic sleeves style and a complete statement itself. It is made with super comfortable fabric “Georgette”, best for everyday wear.</p>
+                        <ol>
+                            <li>Color: White</li>
+                            <li>Premium georgette</li>
+                            <li>Front open</li>
+                        </ol>
+                        <a href="Order.html" style="text-decoration: none;"> <button>Order Now</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dualtone-abaya" class="abaya-category">
+            <h2>Dual Tone Mexi Abaya</h2>
+            <div class="abaya-row">
+            <div class="abaya">
+                <img src="dualtone_1.jpeg" alt="Dual-tone abaya" onclick="openModal(this.src)">
+                <div class="abaya-content">
+                    <h3>RS2,340</h3>
+                    <p>Dress in elegance with our Dual Shade Abaya featuring trendy cuff sleeves! This stylish abaya combines two beautiful shades seamlessly, creating a striking contrast. Crafted with soft Georgette. The cuff sleeves add a modern touch, making it perfect for any occasion.</p>
+                    <p>
+                        <ol>
+                            <li>Color: Pinkish</li>
+                            <li>Georgette soft & lightweight</li>
+                            <li>Front closed</li>
+                            <li>Cuffed sleeves</li>
+                        </ol>
+                    </p>
+                    <a href="Order.html" style="text-decoration: none;"> <button>Order Now</button></a>
+                </div>
+            </div>
+            <div class="abaya">
+                <img src="dualtone_2.jpg" alt="Dual-tone abaya" onclick="openModal(this.src)">
+            <div class="abaya-content">
+                <h3>RS2,450</h3>
+                <p>Dress in elegance with our Dual Shade Abaya featuring trendy cuff sleeves! This stylish abaya combines two beautiful shades seamlessly, creating a striking contrast. Crafted with soft Georgette. The cuff sleeves add a modern touch, making it perfect for any occasion.</p>
+                <p>
+                    <ol>
+                        <li>Color: Gorgeous Grape</li>
+                        <li>Premium georgette</li>
+                        <li>Front closed</li>
+                        <li>Cuffed sleeves</li>
+                    </ol>
+                </p>
+                <a href="Order.html" style="text-decoration: none;"><button>Order Now</button></a>
+            </div>
+            </div>
+            <div class="abaya">
+            <img src="dualAbaya.jpg" alt="Dual-tone abaya" onclick="openModal(this.src)">
+            <div class="abaya-content">
+                <h3>RS2,340</h3>
+                <p>Dress in elegance with our Dual Shade Abaya featuring trendy elastic sleeves! This stylish abaya combines two beautiful shades seamlessly, creating a striking contrast. Crafted with premium silk georgette. The elastic sleeves add a modern touch, making it perfect for any occasion.</p>
+                <p>
+                    <ol>
+                        <li>Color:Midnight black</li>
+                        <li>Silk georgette</li>
+                        <li>Front open</li>
+                        <li>Elastic sleeves</li>
+                    </ol>
+                </p>
+                <a href="Order.html" style="text-decoration: none;"> <button>Order Now</button></a>
+            </div>
+            </div>
+            </div>
+           </div>
+            <div id="black-abaya" class="abaya-category">
+                <h2>Black Abaya</h2><br>
+                <div class="abaya-row">
+            <div class="abaya">
+                <img src="black_abaya.jpg" alt="Black abaya" onclick="openModal(this.src)">
+            <div class="abaya-content">
+                <h3>RS2,655</h3>
+                <p>Our Stunning Abaya with Chun adorned with delicate chun embellishments on the front which makes it flared and beautiful. Stitched from a soft and lightweight Georgette fabric. The intricate chun detailing adds a touch of grace to your ensemble.</p>
+                <p>
+                    <ol>
+                        <li>Color: black</li>
+                        <li>Summer-Friendly Stuff</li>
+                        <li>Maxi abaya</li>
+                        <li>Cuff sleeves</li>
+                    </ol>
+                </p>
+                <a href="Order.html" style="text-decoration: none;"><button>Order Now</button></a>
+            </div>
+            </div>
+            <div class="abaya">
+                <img src="Black_abaya2.jpg" alt="Black abaya" onclick="openModal(this.src)">
+            <div class="abaya-content">
+                <h3>RS2,900</h3>
+               <p>Discover elegance in simplicity with our stunning abaya featuring delicate pearls adorning the front. With its classic straight sleeves, beautifully stitched in georgette fabric. This abaya exudes timeless sophistication.</p>
+                <p>
+                    <ol>
+                        <li>Color: black</li>
+                        <li>Premium georgette</li>
+                        <li>Front open</li>
+                        <li>Stright sleeves</li>
+                    </ol>
+                </p>
+                <a href="Order.html" style="text-decoration: none;"><button>Order Now</button></a>
+            </div>
+            </div>
+            <div class="abaya">
+                <img src="black_abaya3.jpg" alt="Black abaya" onclick="openModal(this.src)">
+            <div class="abaya-content">
+                <h3>RS4,200</h3>
+              <p>Elevate your modest style effortlessly with our Abaya Ensemble! This set features a separate inner for added versatility, allowing you to layer with ease. Complete with elastic sleeves for a comfortable fit and a coordinating belt included, both pieces are crafted from luxurious georgette fabric, ensuring elegance and comfort.</p>
+                <p>
+                    <ol>
+                        <li>Color: black</li>
+                        <li>Premium georgette</li>
+                        <li>Zipper with collar Abaya</li>
+                        <li>Elastic sleeves</li>
+                    </ol>
+                </p>
+                <a href="Order.html" style="text-decoration: none;"><button>Order Now</button></a>
+            </div>
+            </div>
+            </div>
+            </div>
+            <div id="hijab-abaya" class="abaya-category">
+                <h2>Hijab</h2><br>
+                <div class="abaya-row">
+            <div class="abaya">
+                <img src="hijab1.jpg" alt="Hijab" onclick="openModal(this.src)">
+            <div class="abaya-content">
+                <h3>RS600</h3>
+            <p>Unleash your inner elegance with our enchanting printed chiffon hijab. Made from luxuriously soft chiffon, this hijab drapes gracefully and brings an air of sophistication to any outfit.</p>
+                <p>
+                    <ol>
+                        <li>Material: Chiffon</li>
+                        <li>Size: 72 x 29 inches</li>
+                    </ol>
+                </p>
+                <a href="Order.html" style="text-decoration: none;"><button>Order Now</button></a>
+            </div>
+            </div>
+            <div class="abaya">
+                <img src="hijab2.jpg" alt="Hijab" onclick="openModal(this.src)">
+            <div class="abaya-content">
+                <h3>RS600</h3>
+            <p>Unleash your inner elegance with our enchanting printed chiffon hijab. Made from luxuriously soft chiffon, this hijab drapes gracefully and brings an air of sophistication to any outfit.</p>
+                <p>
+                    <ol>
+                        <li>Material: Chiffon</li>
+                        <li>Size: 72 x 29 inches</li>
+                    </ol>
+                </p>
+                <a href="Order.html" style="text-decoration: none;"><button>Order Now</button></a>
+            </div>
+            </div>
+            <div class="abaya">
+                <img src="hijab_4.jpg" alt="Hijab" onclick="openModal(this.src)">
+            <div class="abaya-content">
+                <h3>RS600</h3>
+            <p>Unleash your inner elegance with our enchanting printed chiffon hijab. Made from luxuriously soft chiffon, this hijab drapes gracefully and brings an air of sophistication to any outfit.</p>
+                <p>
+                    <ol>
+                        <li>Material: Chiffon</li>
+                        <li>Size: 72 x 29 inches</li>
+                    </ol>
+                </p>
+                <a href="Order.html" style="text-decoration: none;"><button>Order Now</button></a>
+            </div>
+            </div>
+            <div class="abaya">
+                <img src="hijab_5.jpg" alt="Hijab" onclick="openModal(this.src)">
+            <div class="abaya-content">
+                <h3>RS600</h3>
+            <p>Unleash your inner elegance with our enchanting printed chiffon hijab. Made from luxuriously soft chiffon, this hijab drapes gracefully and brings an air of sophistication to any outfit.</p>
+                <p>
+                    <ol>
+                        <li>Material: Chiffon</li>
+                        <li>Size: 72 x 29 inches</li>
+                    </ol>
+                </p>
+                <a href="Order.html" style="text-decoration: none;"><button>Order Now</button></a>
+            </div>
+            </div>
+            </div>
+            </div>
+                </section>
+                <footer>
+                    <p>© 2024 Hijabians Collection. All rights reserved.</p>
+                </footer>
+                <script>
+                        function validateForm() {
+                            var isValid = true;
+                            inputs.forEach(function(input) {
+                                if (!input.checkValidity()) {
+                                    isValid = false;
+                                    return;
+                                }
+                            });
+                            return isValid;
+                        }
+                        orderButton.addEventListener("click", function(event) {
+                            event.preventDefault(); 
+                            if (validateForm()) {
+                            alert('Your form submitted successfully!');
+                                
+                            } else {
+                                alert('Please fill all the required fields.');
+                            }
+                        });
+                       
+                            function openModal(src) {
+                              var modal = document.createElement("DIV");
+                              modal.className = "modal";
+                              document.body.appendChild(modal);
+                              
+                              var modalContent = document.createElement("DIV");
+                              modalContent.className = "modal-content";
+                              modal.appendChild(modalContent);
+                              
+                              var modalImage = document.createElement("IMG");
+                              modalImage.src = src;
+                              modalContent.appendChild(modalImage);
+                              
+                              var closeButton = document.createElement("SPAN");
+                              closeButton.className = "close";
+                              closeButton.innerHTML = "x";
+                              closeButton.onclick = function() {
+                                document.body.removeChild(modal);
+                              };
+                              modalContent.appendChild(closeButton);
+                            }
+                            const searchButton = document.querySelector('.s-bar button');
+                            const searchInput = document.querySelector('.s-bar input[type="text"]');
+                            
+                            searchButton.addEventListener('click', () => {
+                              const searchText = searchInput.value;
+                              alert(`You entered: ${searchText}`);
+                            });
+                        
+                          
+                </script>
+            </body>
+            </html>
