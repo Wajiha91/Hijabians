@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #f9f9f9;
+    }
+    header {
+      background-color: #ff69b4;
+      color: #fff;
+      padding: 25px;
+      text-align: center;
+    }
+    nav {
+      background-color: #333;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+    }
+    nav a:hover{
+      background-color: rgb(167, 96, 167);
+  }
+  nav a:active{
+      background-color: rgb(202, 131, 131);
+  }
+  
+    h2 {
+        padding: 2px;
+      background-color: lightpink;
+      color: black;
+    }
+    p {
+      color: black;
+    }
+    footer {
+      background-color: #ff69b4;
+      color: black;
+      text-align: center;
+      padding: 1px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header style="text-align: center;">
+    <h1 style="text-align: center;">Explore Our Hijab Collection</h1>
+  </header>
+  <nav>
+    <a href="Home.html">Home</a>
+    <a href="Feedback.html">Feedback</a>
+    <a href="About Us.html">AboutUs</a>
+    <a href="Contact.html">Contact Us</a>
+    <a href="Order.html">Orders</a>
+    <a href="Gallery.html">Gallery</a>
+    <a href="Portfolio.html">Portfolio</a>
+    <div class="s-bar">
+      <input type="text" placeholder="Search...">
+      <button>Search</button>
+    </div>
+  </nav>
+  <h1 style="text-align: center; background-color: lightpink; color: black;">Website Brief Summary</h1>
+  <section>
+    <br>
+    <br>
+    <div class="summary">
+      <h3>Website Design</h3>
+      <p>Developed a modern and user-friendly interface for the Online Hijabs-Collection website, focusing on intuitive navigation and showcasing hijabs effectively.</p>
+      <h3>Product Categorization & Filtering:</h3>
+      <p>Implemented robust categorization and filtering options based on material type, design patterns, colors, occasions, and customer preferences.</p>
+      <h3>Product Detail Pages</h3>
+      <p>Created detailed product pages with high-quality images, zoom functionality, and comprehensive descriptions to assist customers in making informed purchasing decisions.</p>
+      <h3>Inventory Management</h3>
+      <p>Integrated inventory management systems for real-time product availability updates, reducing out-of-stock instances and enhancing customer satisfaction.</p>
+      <h3>Collaborative Project</h3>
+      <p>Collaborated with marketing teams on targeted campaigns and promotions, leveraging data analytics and user behavior insights to drive business growth.</p>
+      <br>
+      <h2 style="text-align: center;">About Us</h2>
+      <br>
+      <br>
+      <p><b>Developed by Wajiha Naeem</b></p>
+      <b>Registration No:</b>22-ARID-3165
+      <p>We are a team of passionate designers and developers dedicated to creating exceptional e-commerce experiences. Our mission is to provide high-quality products and excellent customer service.</p>
+    </div>
+  </section>
+  <script>
+    const searchButton = document.querySelector('.s-bar button');
+    const searchInput = document.querySelector('.s-bar input[type="text"]');
+    
+    searchButton.addEventListener('click', () => {
+      const searchText = searchInput.value;
+      alert(`You entered: ${searchText}`);
+    });
+  </script>
+</body>
+</html>
