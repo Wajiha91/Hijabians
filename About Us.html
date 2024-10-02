@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+ body{
+    font-family: arial,sans-serif;
+    margin:0;
+    padding: 0;  
+    box-sizing: border-box;
+    background-color:#f9f9f9; 
+  }
+ header{
+            background-color:#ff69b4;
+            color:  #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+ 
+        nav{
+            background-color:  #333;
+            display: flex;
+            justify-content: space-around;
+            padding:10px;
+        }
+        nav a{
+            color:#fff;
+            text-decoration: none;
+        }
+ nav a:hover{
+    background-color: rgb(167, 96, 167);
+}
+nav a:active{
+    background-color: rgb(202, 131, 131);
+}
+
+
+     section{
+        padding: 20px;
+     }
+     .about-us-content{
+        max-width: 800px;
+        margin: 0 auto;
+        background-color:pink;
+        padding: 25px;
+        border-radius: 8px;
+        box-shadow: black;
+     }
+     footer{
+                background-color:#ff69b4;
+                color:  black;
+                text-align: center;
+                padding: 1px;
+                position: fixed;
+                bottom:0;
+                width:100%;
+               }
+</style>
+</head>
+<body>
+    <header>
+        <h1 >About Us</h1>
+    </header>
+    <nav>
+        <a href="Home.html">Home</a>
+        <a href="Feedback.html">Feedback</a>
+        <a href="About Us.html">AboutUs</a>
+        <a href="Contact.html">Contact Us</a>
+        <a href="Order.html">Orders</a>
+        <a href="Gallery.html">Gallery</a>
+        <a href="Portfolio.html">Portfolio</a>
+        <div class="s-bar">
+    <input type="text" placeholder="Search...">
+    <button>Search</button>
+        </div>
+    </nav><br><br>
+    <section>
+        <div class="about-us-content">
+            <h2 style="text-align:center; color:black" >"Welcome to our Hijabians Collection platform!</h2><br>
+            <p style="color:purple;">Our journey began with a passion for providing stylish and high-quality hijabs to women worldwide. At Hijabs-Collection, we are dedicated to promoting diversity, inclusivity, and empowerment through our carefully curated collection of hijabs designed to inspire confidence and individuality." </p>
+            <h3 style="color: black;">Why choose us?</h3><br>
+            <ol style="color:purple">
+             <li>We offer meticulously Crafted hijabs using top-quality fabrics for durablity and comfort.<li>
+            <li>Stay stylish with our trendy and fashion-forword hijab designs,perfect for both everyday wear and special events</li>
+            <li>Explore a curated collection of modern and traditional hijab styles to complement your style.</li>
+           <li>Enjoy responsive support, quick shipping, and hassle-free returns for a seamless shopping experience.</li>
+            </ol><br>
+            <h3 style="color:black">Contact Us</h3>
+            <p style="color:purple;">Have questions ? Feel free to reach out to us at wajihanaeem91@gmail.com</p>
+        </div>
+        <footer>
+            <p>© 2024 Hijabians Collection. All rights reserved.</p>
+        </footer>
+    </section>
+    <script>
+        const searchButton = document.querySelector('.s-bar button');
+        const searchInput = document.querySelector('.s-bar input[type="text"]');
+        
+        searchButton.addEventListener('click', () => {
+          const searchText = searchInput.value;
+          alert(`You entered: ${searchText}`);
+        });
+    </script>
+   
+</body>
+</html>
