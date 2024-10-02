@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Now-Beautiful Hijab And Abayas</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f9f9f9;
+            color: black;
+        }
+        
+        header{
+            background-color:#ff69b4;
+            color:  #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+ 
+        nav{
+            background-color: #333;
+            display: flex;
+            justify-content: space-around;
+            padding:8px;
+        }
+        nav a{
+            color: #fff;
+            text-decoration: none;
+        }
+        nav a:hover{
+            background-color: rgb(167, 96, 167);
+        }
+        nav a:active{
+            background-color: rgb(202, 131, 131);
+        }
+        .order-form {
+            max-width: 750px;
+            margin: 0 auto;
+            background-color:pink;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        label {
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        
+        
+        input, select, textarea {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid black;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+            transition: border-color 0.3s purple;
+        }
+        #info-btn{
+            margin-top: 30px;
+             padding: 10px;
+            background-color:rgb(228, 152, 228);
+        }
+        #info-btn:hover{
+            background-color: black;
+            color:white;
+        }
+        
+        #submit {
+            border: 1px solid black;
+            background-color: lightpink;
+            color: black;
+            cursor: pointer;
+            width: 100%;
+            padding: 8px; 
+           border-radius: 4px;
+        }
+        #submit:active{
+            background-color:rgb(250, 175, 175);
+        }
+        
+        footer {
+            background-color: #ff69b4;
+            color: black;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Order Now</h1>
+    </header>
+    <nav>
+        <a href="Home.html">Home</a>
+        <a href="Feedback.html">Feedback</a>
+        <a href="About Us.html">About Us</a>
+        <a href="Contact.html">Contact Us</a>
+        <a href="Order.html">Orders</a>
+        <a href="Gallery.html">Gallery</a>
+        <a href="Portfolio.html">Portfolio</a>
+        <div class="s-bar">
+            <input type="text" placeholder="Search...">
+            <button>Search</button>
+        </div>
+    </nav>
+    <section>
+        <br><br>
+        <div class="order-form">
+            <h2 style="text-align: center;">Place Your Order</h2>
+            <form action="connect.php" method="post">
+                <label for="name">Name:</label>
+               <input type="text" id="name" name="name" required>
+               <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>   
+            <label for="phone">Phone No:</label>
+             <input type="tel" id="phone" name="phone" required>
+                <label for="Abayas">Select Hijab and Abayas:</label>
+                <select id="Abayas" name="Abayas" required>
+                    <option name="Abayas" value="colored abaya">Colored Abaya</option>
+                    <option name="Abayas" value="printed abaya">Printed Abaya</option>
+                    <option name="Abayas" value="black abaya">Black Abaya</option>
+                    <option name="Abayas" value="white abaya">White Abaya</option>
+                    <option name="Abayas" value="hijab">Hijab</option>
+                </select>
+                <label for="modestCollection">Modest Attire Collection:</label>
+                <input type="number" id="modestCollection" name="modestCollection" min="1" required>
+                <label for="comments">Additional comments:</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+                <button id="submit" name="submit"><b>Submit</b></button>
+            </form>
+            <button id="info-btn">Attention_Grabbing</button>
+        </div>
+    </section>
+    <footer>
+        <p>© 2024 Hijabians Collection. All rights reserved.</p>
+    </footer>
+    <script>
+        var contactForm = document.getElementById('contactForm');
+        var submitButton = document.getElementById('submit');
+        var inputs = document.querySelectorAll('input, textarea');
+    
+        function validateForm() {
+            var isValid = true;
+            inputs.forEach(function(input) {
+                if (!input.checkValidity()) {
+                    isValid = false;
+                    return;
+                }
+            });
+            return isValid;
+        }
+        submitButton.addEventListener("click", function(event) {
+            event.preventDefault(); 
+            if (validateForm()) {
+            alert('Your form submitted successfully! Redirecting to the order page.');
+                
+            } else {
+                alert('Please fill all the required fields.');
+            }
+        });
+        var inputs = document.querySelectorAll('input, textarea');
+        inputs.forEach(function(input) {
+            input.addEventListener('focus', function() {
+                this.style.borderColor = 'wheat';
+            });
+            input.addEventListener('focus', function() {
+                this.style.backgroundColor = 'whitesmoke';
+            });
+        });
+        var options = document.querySelectorAll('option, textarea');
+        options.forEach(function(option) {
+            option.addEventListener('focus', function() {
+                this.style.borderColor = 'wheat';
+            });
+            option.addEventListener('focus', function() {
+                this.style.backgroundColor = 'whitesmoke';
+            });
+        });
+        const infoBtn = document.getElementById('info-btn');
+        infoBtn.addEventListener('click', () => {
+          window.open('informative.html', '_blank');
+        });
+        const searchButton = document.querySelector('.s-bar button');
+        const searchInput = document.querySelector('.s-bar input[type="text"]');
+        
+        searchButton.addEventListener('click', () => {
+          const searchText = searchInput.value;
+          alert(`You entered: ${searchText}`);
+        });
+        
+    </script>
+</body>
+</html>
